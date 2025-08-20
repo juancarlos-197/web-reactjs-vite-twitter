@@ -1,9 +1,8 @@
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
 
 function App() {
-
   return (
     <>
       <div>
@@ -15,12 +14,25 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
-      
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <article style={{}}>
+        <header>
+          <img
+            src="https://github.com/juancarlos-197.png"
+            alt="El avatar de portafolio "
+          />
+          <div>
+            <strong>Juán Carlos Albán Luna</strong>
+            <br />
+            <span>jalban.dacompsc@gmail.com</span>
+          </div>
+          <br />
+        </header>
+        <aside>
+          <button>Seguir</button>
+        </aside>
+      </article>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
