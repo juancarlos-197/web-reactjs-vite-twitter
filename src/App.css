@@ -45,3 +45,11 @@ width: 100px;
 height: 100px;
 border-radius: 10000px;
 }
+.tw-button{
+  margin-left: 16px;
+  border: 0;
+  border-radius: 999px;
+}
+.margin-t{
+  margin-left: 10px;
+}

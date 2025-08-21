@@ -1,10 +1,12 @@
-import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
+import reactLogo from "./assets/react.svg";
+
 import "./App.css";
+import { TwitterCard } from "./TwitterCard";
 
 function App() {
   return (
-    <>
+    <section className="App">
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -14,24 +16,20 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
-      <article style={{}}>
-        <header>
-          <img
-            src="https://github.com/juancarlos-197.png"
-            alt="El avatar de portafolio "
-          />
-          <div>
-            <strong>Juán Carlos Albán Luna</strong>
-            <br />
-            <span>jalban.dacompsc@gmail.com</span>
-          </div>
-          <br />
-        </header>
-        <aside>
-          <button>Seguir</button>
-        </aside>
-      </article>
-    </>
+      <TwitterCard
+        userName="juancarlos-197.png"
+        name="Juán Carlos Albán Luna"
+        email="jalban.dacompsc@gmail.com"
+        isFollowing={false}
+      />
+      <br />
+      <TwitterCard
+        userName="leifermendez.png"
+        name="Miguel Angel"
+        email="miguel.dacompsc@gmail.com"
+        isFollowing
+      />
+    </section>
   );
 }
 
