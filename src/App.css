@@ -50,6 +50,10 @@ border-radius: 10000px;
   border: 0;
   border-radius: 999px;
 }
+.tw-button:hover{
+background-color: aqua;
+}
+
 .margin-t{
   margin-left: 10px;
 }
