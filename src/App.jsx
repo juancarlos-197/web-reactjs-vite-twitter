@@ -1,8 +1,12 @@
 import viteLogo from "/vite.svg";
 import reactLogo from "./assets/react.svg";
+import { Header } from "./components/Header/Header.jsx";
+import { Section } from "./components/Section/Section.jsx";
+import Footer from "./components/Footer/Footer.jsx";
+
+import { TwitterCard } from "./TwitterCard";
 
 import "./App.css";
-import { TwitterCard } from "./TwitterCard";
 
 const users = [
   // Usuario principal
@@ -31,31 +35,35 @@ const users = [
 function App() {
   // Renderiza la sección principal de la aplicación
   return (
-    <><section className="App">
-      {/* Logos de Vite y React */}
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      {/* Título principal */}
-      <h1>Vite + React</h1>
+    <>     
+     <Header title="Mi página Web" show={true}> <h3>  Esto es header  </h3></Header>
 
-      {/* Renderiza una tarjeta por cada usuario */}
-      {users.map(({ userName, name, email, isFollowing }) => (
-        <TwitterCard
-          key={userName}
-          userName={userName}
-          name={name}
-          email={email}
-          isFollowing={isFollowing} />
-      ))}
+      <section className="App">
+        {/* Logos de Vite y React */}
+        <div>
+          <a href="https://vite.dev" target="_blank">
+            <img src={viteLogo} className="logo" alt="Vite logo" />
+          </a>
+          <a href="https://react.dev" target="_blank">
+            <img src={reactLogo} className="logo react" alt="React logo" />
+          </a>
+        </div>
+        {/* Título principal */}
+        <h1>Vite + React</h1>
 
-      {/* Ejemplo de tarjetas adicionales comentadas */}
-      {/*
+        {/* Renderiza una tarjeta por cada usuario */}
+        {users.map(({ userName, name, email, isFollowing }) => (
+          <TwitterCard
+            key={userName}
+            userName={userName}
+            name={name}
+            email={email}
+            isFollowing={isFollowing}
+          />
+        ))}
+
+        {/* Ejemplo de tarjetas adicionales comentadas */}
+        {/*
       <TwitterCard
         userName="midudev.png"
         name="Juán Carlos Albán Luna"
@@ -70,12 +78,10 @@ function App() {
         isFollowing={false}
       />
     */}
-
-
-
-    </section>
-  </>   
-
+      </section>
+      <Section/> 
+      <Footer />
+    </>
   );
 }
 
